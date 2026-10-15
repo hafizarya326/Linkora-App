@@ -1,0 +1,12 @@
+{
+  "name": "scrapr-root",
+  "private": true,
+  "workspaces": [
+    "scrapr"
+  ],
+  "main": "./scrapr/index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ./scrapr/test/test.js"
+  }
+}
