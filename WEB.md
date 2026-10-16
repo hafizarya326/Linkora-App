@@ -1,14 +1,15 @@
-# scrapr web
+# Linkora web
 
-This workspace includes a small local web interface for the existing `scrapr`
-library. It sends requests to the actual installed scraper methods; it does not
-mock results or change the scraper implementations.
+Linkora is a local web interface for the original `scrapr` library. It sends
+requests to the actual installed scraper methods; it does not mock results or
+change the scraper implementations. The original scraper is by Coflyn; the
+Linkora interface redesign is by Hafiz Arya Pratama.
 
 ## Run on Windows
 
 1. Install Node.js 16 or newer (npm is included).
 2. Double-click `start.bat`. It installs the package dependencies the first
-   time, starts the local server, and opens the page in your browser.
+   time, starts the local server, and opens Linkora in your browser.
 3. Paste a URL, choose a platform and one of its available methods, then select
    **Scrape link**.
 
@@ -19,4 +20,5 @@ opening a browser window.
 
 The session history stays in the current browser tab and is cleared when the
 page is refreshed. Use scraper results only where you have permission to access
-or download the content.
+or download the content. Please refer to the original scraper repository's
+license for usage and redistribution terms.

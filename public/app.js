@@ -388,10 +388,13 @@ form.addEventListener("submit", async (event) => {
     updateHistory();
     showNotice("Scrape completed successfully.", "success");
   } catch (error) {
-    showNotice(error.message || "Something went wrong while scraping this link.", "error");
+    const message = error instanceof TypeError && error.message === "Failed to fetch"
+      ? "Tidak dapat terhubung ke server Linkora. Pastikan terminal yang menjalankan npm start masih terbuka, lalu muat ulang halaman."
+      : error.message || "Something went wrong while scraping this link.";
+    showNotice(message, "error");
     resultSection.hidden = false;
     resultCard.replaceChildren();
-    addText(resultCard, "p", "result-description", error.message || "The scraper could not complete this request.");
+    addText(resultCard, "p", "result-description", message);
     document.querySelector("#result-heading").textContent = "This one didn’t work.";
     resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
   } finally {

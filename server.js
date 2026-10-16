@@ -160,7 +160,7 @@ server.listen(PORT, HOST, () => {
   const address = server.address();
   const port = typeof address === "object" && address ? address.port : PORT;
   const webUrl = `http://${HOST}:${port}`;
-  console.log(`scrapr web is ready at ${webUrl}`);
+  console.log(`Linkora is ready at ${webUrl}`);
   console.log("Press Ctrl+C to stop the local server.");
 
   if (process.env.OPEN_BROWSER === "0") return;
@@ -173,7 +173,7 @@ server.listen(PORT, HOST, () => {
     ? ["url.dll,FileProtocolHandler", webUrl]
     : [webUrl];
   execFile(browserCommand, browserArgs, { windowsHide: true }, (error) => {
-    if (error) console.warn(`Open ${webUrl} in your browser to use scrapr web.`);
+    if (error) console.warn(`Open ${webUrl} in your browser to use Linkora.`);
   });
 });
 

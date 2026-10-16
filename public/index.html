@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A unified workspace for extracting publicly available media and resolving links."
+      content="Linkora brings public social media, music, and file links together in one bold, easy-to-use scraping workspace."
     />
     <meta name="theme-color" content="#fff9ee" />
-    <title>scrapr — One link. Endless possibilities.</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Linkora" />
+    <meta property="og:title" content="Linkora — One Link. More Data." />
+    <meta
+      property="og:description"
+      content="A multi-platform link utility for discovering publicly available content metadata."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Linkora — One Link. More Data." />
+    <meta
+      name="twitter:description"
+      content="A multi-platform link utility for discovering publicly available content metadata."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Linkora — One Link. More Data.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +34,11 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#home" aria-label="scrapr home">
-        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span>scrapr<span class="brand-period">.</span></span>
+      <a class="brand" href="#home" aria-label="Linkora home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="m9.4 14.6 5.2-5.2m-8 2.1-1.2 1.2a4 4 0 0 0 5.7 5.7l2.1-2.1m1.4-6.6 2.1-2.1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/></svg>
+        </span>
+        <span>Linkora<span class="brand-period">.</span></span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#home">Workspace</a>
@@ -38,16 +54,16 @@
           <div class="eyebrow"><span class="eyebrow-star">✳</span> MULTI-PLATFORM SCRAPER</div>
           <h1>ONE LINK.<br /><span>ENDLESS</span><br />POSSIBILITIES<span class="hero-dot">.</span></h1>
           <p class="hero-description">
-            Your all-in-one workspace for public links. Pick a platform, paste a URL, and let
-            scrapr do the busywork.
+            Linkora brings your public social, music, and file links into one workspace. Choose a
+            platform, paste a URL, and get more from every link.
           </p>
           <a class="text-link" href="#workspace">JUMP INTO THE WORKSPACE <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="hero-art" aria-label="Abstract scrapr illustration">
+        <div class="hero-art" role="img" aria-label="Linkora illustration: one link in, more data out">
           <div class="art-grid"></div>
           <div class="art-sticker sticker-yellow">LINK<br />IN<span>↘</span></div>
           <div class="art-sticker sticker-orange">DATA<br />OUT<span>↗</span></div>
-          <div class="art-center"><span class="center-spark">✳</span><span>scrape<br />the good<br />stuff.</span></div>
+          <div class="art-center"><span class="center-spark">✳</span><span>one link.<br />more data.</span></div>
           <div class="art-caption">LESS TAB HOPPING.<br />MORE GETTING IT DONE.</div>
           <div class="art-orbit orbit-one"></div>
           <div class="art-orbit orbit-two"></div>
@@ -123,7 +139,7 @@
             <div class="eyebrow">03 / THE TOOLBOX</div>
             <h2>All the platforms.<br /><span>One place.</span></h2>
           </div>
-          <p>These are the platforms and methods included in the current scrapr package.</p>
+          <p>These are the platforms and methods included in the current Linkora installation.</p>
         </div>
         <div class="platform-grid" id="platform-grid">
           <div class="platform-loading">Checking available platforms…</div>
@@ -144,14 +160,60 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" aria-labelledby="footer-title">
       <div class="footer-inner">
-        <a class="brand footer-brand" href="#home">
-          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span>scrapr<span class="brand-period">.</span></span>
-        </a>
-        <p>Built for links, not clutter. Use responsibly and respect creators’ rights.</p>
-        <a class="back-top" href="#home">BACK TO TOP ↑</a>
+        <div class="footer-top">
+          <a class="brand footer-brand" href="#home" aria-label="Linkora home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="m9.4 14.6 5.2-5.2m-8 2.1-1.2 1.2a4 4 0 0 0 5.7 5.7l2.1-2.1m1.4-6.6 2.1-2.1a4 4 0 0 1 5.7 5.7l-1.2 1.2"/></svg>
+            </span>
+            <span class="footer-brand-copy"><span>Linkora<span class="brand-period">.</span></span><span class="footer-tagline">One Link. More Data.</span></span>
+          </a>
+          <span class="community-badge">INDEPENDENT COMMUNITY PROJECT</span>
+        </div>
+
+        <div class="footer-intro">
+          <h2 id="footer-title">Built with appreciation.</h2>
+          <p>A multi-platform link utility for discovering publicly available content metadata.</p>
+        </div>
+
+        <nav class="social-links" aria-label="Follow Linkora's UI contributor">
+          <a class="social-link social-instagram" href="https://www.instagram.com/hafizpratama326/" target="_blank" rel="noopener noreferrer" aria-label="Follow Hafiz Arya Pratama on Instagram (opens in a new tab)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-fill" cx="17.7" cy="6.6" r="1"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a class="social-link social-tiktok" href="https://www.tiktok.com/@fizmood" target="_blank" rel="noopener noreferrer" aria-label="Follow Hafiz Arya Pratama on TikTok (opens in a new tab)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3v11.2a4.2 4.2 0 1 1-3.2-4.1"/><path d="M14 3c.6 3 2.5 4.8 5.5 5.2"/></svg>
+            <span>TikTok</span>
+          </a>
+          <a class="social-link social-github" href="https://github.com/hafizarya326" target="_blank" rel="noopener noreferrer" aria-label="View Hafiz Arya Pratama on GitHub (opens in a new tab)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 19c-4.3 1.4-4.3-2.4-6-2.8m12 5v-3.3a2.9 2.9 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6A4.7 4.7 0 0 0 18.5 6a4.3 4.3 0 0 0-.1-3.2S17.4 2.5 15 4.1a12.5 12.5 0 0 0-6 0C6.6 2.5 5.6 2.8 5.6 2.8A4.3 4.3 0 0 0 5.5 6 4.7 4.7 0 0 0 4.2 9.6c0 4.7 2.9 5.7 5.6 6a2.9 2.9 0 0 0-.8 2.3V21"/></svg>
+            <span>GitHub</span>
+          </a>
+        </nav>
+
+        <div class="footer-credits">
+          <section class="credit-card" aria-labelledby="ui-credit-title">
+            <span class="credit-label">UI / UX &amp; REDESIGN</span>
+            <h3 id="ui-credit-title"><a href="https://github.com/hafizarya326" target="_blank" rel="noopener noreferrer">Hafiz Arya Pratama <span aria-hidden="true">↗</span></a></h3>
+            <p>Interface design and visual enhancements.</p>
+          </section>
+          <section class="credit-card engine-credit" aria-labelledby="engine-credit-title">
+            <span class="credit-label">ORIGINAL SCRAPER ENGINE</span>
+            <h3 id="engine-credit-title"><a href="https://github.com/coflyn/scrapr" target="_blank" rel="noopener noreferrer">Coflyn <span aria-hidden="true">↗</span></a></h3>
+            <p>Underlying scraping functionality by the original developer.</p>
+          </section>
+        </div>
+
+        <p class="attribution">
+          This project builds upon the original scraper implementation. Credits go to the original
+          developer for the underlying scraping functionality, while the interface redesign and
+          visual enhancements are attributed to their respective contributors.
+        </p>
+        <div class="footer-bottom">
+          <p>Please refer to the <a href="https://github.com/coflyn/scrapr" target="_blank" rel="noopener noreferrer">original repository <span class="visually-hidden">(opens in a new tab)</span></a>'s license for usage and redistribution terms.</p>
+          <a class="back-top" href="#home">BACK TO TOP ↑</a>
+        </div>
       </div>
     </footer>
   </body>
