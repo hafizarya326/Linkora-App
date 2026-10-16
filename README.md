@@ -22,6 +22,13 @@ Linkora is a multi-platform link scraper featuring a bold, modern Neo-Brutalist 
 
 Alternatively, run `npm start` from this folder. The server is available only on this computer at http://127.0.0.1:3000 by default. Press Ctrl+C in the terminal to stop it. Set `OPEN_BROWSER=0` to start without opening a browser window.
 
+## Deploy to Vercel
+
+Import this repository into Vercel and deploy it from the repository root. The
+included `vercel.json` routes requests to the Node.js serverless function and
+bundles the `public/` assets it serves. No environment variables are required
+for the default setup.
+
 ## Credits & Attribution
 
 Linkora's UI/UX redesign and visual enhancements are created by **Hafiz Arya Pratama**.

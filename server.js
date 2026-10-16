@@ -91,7 +91,7 @@ function serveStatic(pathname, res, method) {
   });
 }
 
-const server = http.createServer(async (req, res) => {
+async function handler(req, res) {
   const requestUrl = new URL(req.url, `http://${req.headers.host || HOST}`);
 
   if (requestUrl.pathname === "/api/platforms" && req.method === "GET") {
@@ -154,30 +154,35 @@ const server = http.createServer(async (req, res) => {
   }
 
   sendJson(res, 405, { message: "Method not allowed." });
-});
+}
 
-server.listen(PORT, HOST, () => {
-  const address = server.address();
-  const port = typeof address === "object" && address ? address.port : PORT;
-  const webUrl = `http://${HOST}:${port}`;
-  console.log(`Linkora is ready at ${webUrl}`);
-  console.log("Press Ctrl+C to stop the local server.");
+module.exports = handler;
 
-  if (process.env.OPEN_BROWSER === "0") return;
-  const browserCommand = process.platform === "win32"
-    ? "rundll32.exe"
-    : process.platform === "darwin"
-      ? "open"
-      : "xdg-open";
-  const browserArgs = process.platform === "win32"
-    ? ["url.dll,FileProtocolHandler", webUrl]
-    : [webUrl];
-  execFile(browserCommand, browserArgs, { windowsHide: true }, (error) => {
-    if (error) console.warn(`Open ${webUrl} in your browser to use Linkora.`);
+if (require.main === module) {
+  const server = http.createServer(handler);
+  server.listen(PORT, HOST, () => {
+    const address = server.address();
+    const port = typeof address === "object" && address ? address.port : PORT;
+    const webUrl = `http://${HOST}:${port}`;
+    console.log(`Linkora is ready at ${webUrl}`);
+    console.log("Press Ctrl+C to stop the local server.");
+
+    if (process.env.OPEN_BROWSER === "0") return;
+    const browserCommand = process.platform === "win32"
+      ? "rundll32.exe"
+      : process.platform === "darwin"
+        ? "open"
+        : "xdg-open";
+    const browserArgs = process.platform === "win32"
+      ? ["url.dll,FileProtocolHandler", webUrl]
+      : [webUrl];
+    execFile(browserCommand, browserArgs, { windowsHide: true }, (error) => {
+      if (error) console.warn(`Open ${webUrl} in your browser to use Linkora.`);
+    });
   });
-});
 
-server.on("error", (error) => {
-  console.error(`Could not start the web server: ${error.message}`);
-  process.exitCode = 1;
-});
+  server.on("error", (error) => {
+    console.error(`Could not start the web server: ${error.message}`);
+    process.exitCode = 1;
+  });
+}
