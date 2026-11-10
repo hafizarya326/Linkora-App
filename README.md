@@ -12,7 +12,7 @@ Linkora is a multi-platform link scraper featuring a bold, modern Neo-Brutalist 
 - Instagram
 - TikTok
 - YouTube
-- X (formerly Twitter)
+- X 
 
 ## Run locally on Windows
 
